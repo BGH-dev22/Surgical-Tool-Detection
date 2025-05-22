@@ -53,10 +53,12 @@ L’application est déployée localement ou sur un serveur accessible via un na
 5. **Connexion caméra externe**  
    L’interface supporte la connexion à des caméras via URL réseau (RTSP) ou via scrcpy pour capter des flux d’une tablette Android en direct.
 
-Exemple d'interface (capture d'écran)
+Exemple d'interface 
 -------------------------------------
 
-.. image:: Documentation/Images/streamlit.png
+.. image:: /Documentation/Images
+/streamlit.png
+
    :alt: Exemple d’interface Streamlit avec détection d’outils chirurgicaux
    :align: center
    :width: 600px
