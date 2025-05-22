@@ -1,19 +1,28 @@
-Équipe
+Equipe
 ======================================
 
-L'équipe se compose de deux membres ayant travaillé sous la supervision de Monsieur Tawfik Masrour.
+L'équipe se compose de 2 individus. Ils ont opéré sous l'encadrement de Mr Tawfik Masrour.
 
-Encadrant
----------
+L'encadrant : 
+----------------
+    - **Encadrant**: Masrour Tawfik |linkedin_Masrour|
+   
+.. |linkedin_Masrour| image:: ../Images/LinkedIn_Logo.jpeg
+    :width: 16
+    :height: 16
+    :target: https://www.linkedin.com/in/tawfik-masrour-43163b85/
 
-- **Encadrant** : Masrour Tawfik  
-  [LinkedIn - Tawfik Masrour](https://www.linkedin.com/in/tawfik-masrour-43163b85/)
+Les membres :
+--------------
 
-Membres de l’équipe
--------------------
+    - **Membre 1**: Boughnam Houda |linkedin_houda|
+    - **Membre 2**: Amri Maryam |linkedin_amri|
+.. |linkedin_houda| image:: ../Images/LinkedIn_Logo.jpeg
+    :width: 16
+    :height: 16
+    :target: https://www.linkedin.com/in/houda-boughnam-45b622335/
 
-- **Membre 1** : Boughnam Houda  
-  [LinkedIn - Houda Boughnam](https://www.linkedin.com/in/houda-boughnam-45b622335/)
-
-- **Membre 2** : Amri Maryam  
-  [LinkedIn - Maryam Amri](https://www.linkedin.com/in/maryam-amri-31987034b/)
+.. |linkedin_amri| image:: ../Images/LinkedIn_Logo.jpeg
+    :width: 16
+    :height: 16
+    :target: https://www.linkedin.com/in/maryam-amri-31987034b/
