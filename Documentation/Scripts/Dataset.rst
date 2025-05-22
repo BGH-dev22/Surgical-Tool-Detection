@@ -70,7 +70,7 @@ Spécifications Techniques
    * - Format des données
      - Images JPG + fichiers d’annotation YAML / TXT / JSON
    * - Nombre total d'images
-     - Environ 4000 images
+     - Plus que 4000 images
    * - Résolution typique
      - 640x640 pixels
   
