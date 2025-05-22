@@ -53,7 +53,7 @@ Pipeline Technique
 
 Technologies utilisées
 ----------------------
-- Python 3.10
+- Python 3.11
 - OpenCV
 - Ultralytics YOLOv8
 - DeepSORT
