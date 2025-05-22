@@ -1,4 +1,4 @@
-Interface et Déploiement de l'Analyseur Chirurgical
+Interface et Déploiement 
 ===================================================
 
 Vue d'ensemble
@@ -56,8 +56,7 @@ L’application est déployée localement ou sur un serveur accessible via un na
 Exemple d'interface 
 -------------------------------------
 
-.. image:: /Documentation/Images
-/streamlit.png
+.. image:: /Documentation/Images/streamlit.png
 
    :alt: Exemple d’interface Streamlit avec détection d’outils chirurgicaux
    :align: center
