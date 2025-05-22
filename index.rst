@@ -1,7 +1,7 @@
-Bienvenue à Textra-Health's documentation!
+Bienvenue à SurgiSafe's documentation!
 ====================================
 
-.. figure:: Documentation/Images/logo.jpeg
+.. figure:: Documentation/Images/SurgiSafe.png
    :width: 80%
    :align: center
    :alt: Alternative text for the image
