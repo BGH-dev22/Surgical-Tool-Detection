@@ -55,7 +55,8 @@ Exemple d'annotation d'une image :
 Exemple visuel du dataset
 --------------------------
 
-.. image:: /Documentation/Images/bisturi1_jpg.rf.07e2b0050d29fcc4b426c1f8a96b7b57.jpg
+.. image:: /Documentation/Images
+/bisturi1_jpg.rf.07e2b0050d29fcc4b426c1f8a96b7b57.jpg
    :width: 500px
    :alt: Exemple d’image annotée du dataset
    :align: center
