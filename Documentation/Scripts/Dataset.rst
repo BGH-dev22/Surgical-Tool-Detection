@@ -55,7 +55,7 @@ Exemple d'annotation d'une image :
 Exemple visuel du dataset
 --------------------------
 
-.. image:: _static/bisturi1_jpg.rf.07e2b0050d29fcc4b426c1f8a96b7b57.jpg
+.. image:: Images/bisturi1_jpg.rf.07e2b0050d29fcc4b426c1f8a96b7b57.jpg
    :width: 500px
    :alt: Exemple d’image annotée du dataset
    :align: center
@@ -99,7 +99,7 @@ Interface Utilisateur
 
 Une interface graphique a été développée à l'aide de **Streamlit**, facilitant l’utilisation du système pour le personnel médical.
 
-.. image:: _static/streamlit.png
+.. image:: Images/streamlit.png
    :width: 600px
    :alt: Interface Streamlit de détection
    :align: center
