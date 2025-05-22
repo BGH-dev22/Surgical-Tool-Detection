@@ -15,14 +15,14 @@ L'encadrant :
 Les membres :
 --------------
 
-    - **Membre 1**: Nguadi Nassira |linkedin_Nassira|
-    - **Membre 2**: Ouzzou ilyas |linkedin_ilyas|
-.. |linkedin_Nassira| image:: ../Images/LinkedIn_Logo.jpeg
+    - **Membre 1**: Boughnam Houda |linkedin_houda|
+    - **Membre 2**: Amri Maryam |linkedin_amri|
+.. |linkedin_houda| image:: ../Images/LinkedIn_Logo.jpeg
     :width: 16
     :height: 16
-    :target: https://www.linkedin.com/in/nassira-nguadi-41b6a4275/
+    :target: https://www.linkedin.com/in/houda-boughnam-45b622335/
 
-.. |linkedin_ilyas| image:: ../Images/LinkedIn_Logo.jpeg
+.. |linkedin_amri| image:: ../Images/LinkedIn_Logo.jpeg
     :width: 16
     :height: 16
-    :target: https://www.linkedin.com/in/ilyass-ouzzou-41512819a/
+    :target: https://www.linkedin.com/in/maryam-amri-31987034b/
