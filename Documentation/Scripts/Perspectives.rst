@@ -1,22 +1,7 @@
 Perspectives Futures
 ===============================
 
-.. role:: red
-   :class: red
-.. role:: blue
-   :class: blue
-.. role:: green
-   :class: green
-
-.. raw:: html
-
-   <style>
-   .red {color: red;}
-   .blue {color: blue;}
-   .green {color: green;}
-   </style>
-
-:blue:`Évolutions Techniques`
+Évolutions Techniques
 -----------------------------
 
 Amélioration des Modèles
@@ -35,7 +20,7 @@ Adaptation Multimodale
 - Fusion de données provenant de caméras RGB, IR, et endoscopiques.
 - Adaptation à différents types de procédures (cardio, ortho, neuro, etc.)
 
-:green:`Applications Cliniques`
+Applications Cliniques
 -----------------------------
 
 Alerte de Sécurité
@@ -53,7 +38,7 @@ Assistance à la Formation
 - Création d’un outil pédagogique de simulation pour internes en chirurgie.
 - Retour en temps réel sur les erreurs de manipulation d’outils.
 
-:red:`Contraintes & Défis`
+Contraintes et Défis
 ----------------------------
 
 Conformité Médicale
@@ -68,7 +53,7 @@ Fiabilité et Robustesse
 - Réduction du taux de faux positifs/negatifs.
 - Tolérance aux variations de lumière, de caméra, ou de mouvement.
 
-:blue:`Innovation & Recherche`
+Innovation et Recherche
 -----------------------------
 
 Vision par Ordinateur Explicable
