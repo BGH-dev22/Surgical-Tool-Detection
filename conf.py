@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Textra-Health'
-copyright = '2024, GIIA'
-author = 'GIIA'
+project = 'SurgiSafe'
+copyright = '2025, IATDS'
+author = 'IATDS'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
