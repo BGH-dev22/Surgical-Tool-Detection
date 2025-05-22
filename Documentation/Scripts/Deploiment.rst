@@ -1,140 +1,74 @@
-=================================================
-Interface et Déploiement de l'Analyseur Médical
-=================================================
+Interface et Déploiement de l'Analyseur Chirurgical
+===================================================
 
-.. role:: red
-   :class: red
-
-.. role:: green
-   :class: green
-
-.. role:: blue
-   :class: blue
-
-.. role:: orange
-   :class: orange
-
-.. raw:: html
-
-   <style>
-   .red {color: #FF4444;}
-   .green {color: #2ECC71;}
-   .blue {color: #3498DB;}
-   .orange {color: #E67E22;}
-   </style>
-
-:blue:`Vue d'Ensemble`
---------------------
-L'interface d'analyse d'examens médicaux est une application web développée avec Streamlit qui permet l'analyse automatisée des résultats d'analyses sanguines. Elle intègre nos modèles OCR et d'analyse précédemment développés.
-
-.. figure::  /Documentation/Images/interface_principale.jpeg
-   :alt: Interface Principale de l'Application
-   :align: center
-   :width: 100%
-
-   Interface principale de l'application d'analyse d'examens médicaux
-
-:green:`Architecture de l'Interface`
---------------------------------
-L'interface se compose de plusieurs modules interconnectés:
-
-1. **Module d'Upload**
-   - Limite de taille: 200MB par fichier
-   - Formats supportés: PNG, JPG, JPEG, PDF, TXT, DOCX
-   - Interface drag & drop intuitive
-
-.. figure::  /Documentation/Images/extraction_text.jpeg
-   :alt: Interface d'upload et d'extraction
-   :align: center
-   :width: 100%
-
-   Module d'upload avec extraction de texte
-
-:orange:`Workflow de l'Application`
--------------------------------
-
-Processus d'Analyse
-~~~~~~~~~~~~~~~~~~
-
-1. **Upload et Extraction du Texte**
-
-.. figure::  /Documentation/Images/biochimie_scan.jpeg
-   :alt: Exemple de scan d'analyse biochimique
-   :align: center
-   :width: 100%
-
-   Exemple de document d'analyse biochimique scanné
-
-2. **Organisation des Données**
-
-.. figure::  /Documentation/Images/organisation_data.jpeg
-   :alt: Organisation des données extraites
-   :align: center
-   :width: 100%
-
-   Interface d'organisation des données extraites
-
-3. **Analyse et Résultats**
-
-.. figure::  /Documentation/Images/analyse_results.jpeg
-   :alt: Résultats de l'analyse
-   :align: center
-   :width: 100%
-
-   Affichage des résultats de l'analyse
-
-4. **Génération du Rapport**
-
-.. figure::  /Documentation/Images/rapport_success.jpeg
-   :alt: Génération du rapport
-   :align: center
-   :width: 100%
-
-   Confirmation de génération du rapport
-
-:blue:`Fonctionnalités Détaillées`
-------------------------------
-
-1. **Extraction de Texte**
-   L'interface permet l'extraction automatique du texte à partir des documents scannés. Le système utilise notre modèle OCR optimisé pour garantir une reconnaissance précise des données médicales.
-
-2. **Organisation des Données**
-   Les données extraites sont automatiquement structurées selon les catégories d'analyses (biochimie, hématologie, etc.).
-
-3. **Analyse Automatique**
-   Le système analyse les valeurs extraites en les comparant aux normes médicales standard et identifie les anomalies potentielles.
-
-4. **Génération de Rapports**
-   L'interface permet de générer des rapports détaillés incluant l'analyse complète des résultats.
-
-:green:`Guide d'Utilisation`
-------------------------
-
-1. **Téléchargement du Document**
-   - Utilisez l'interface drag & drop ou le bouton "Browse files"
-   - Formats acceptés: PNG, JPG, JPEG, PDF, TXT, DOCX
-   - Taille limite: 200MB par fichier
-
-2. **Extraction et Vérification**
-   - Cliquez sur "Extraire le texte"
-   - Vérifiez les données extraites
-   - Utilisez "Organiser" pour structurer l'information
-
-3. **Analyse des Résultats**
-   - Lancez l'analyse avec le bouton "Analyser"
-   - Examinez les résultats et les alertes
-   - Générez le rapport final
-
-:red:`Points d'Attention`
----------------------
-- Qualité des scans requise: minimum 300 DPI
-- Orientation correcte des documents
-- Vérification manuelle des valeurs critiques
-- Sauvegarde systématique des rapports générés
-
-
-
-
-:green:`Conclusion`
+Vue d'ensemble
 --------------
-Cette interface représente l'aboutissement de notre travail sur l'OCR médical et l'analyse automatisée. Elle combine nos différents modules dans une solution intégrée et facile d'utilisation, tout en maintenant la rigueur nécessaire au domaine médical.
+
+L'application de suivi chirurgical et détection d'outils est une interface web interactive développée avec Streamlit. Elle permet la détection en temps réel des instruments chirurgicaux via un modèle YOLOv8 personnalisé, offrant un retour visuel instantané et des alertes en cas d'anomalies (oubli d’outils, etc.). Cette interface vise à faciliter la surveillance des interventions et améliorer la sécurité patient.
+
+Architecture de l'Interface
+---------------------------
+
+L'interface est organisée autour de plusieurs modules clés :
+
+- **Module d'entrée vidéo**  
+  Permet la capture et la lecture de flux vidéo en direct ou via URL (RTSP, HTTP). Ce flux est ensuite traité image par image.
+
+- **Module de détection et suivi**  
+  Intègre le modèle YOLOv8 personnalisé chargé localement pour détecter les outils chirurgicaux dans chaque frame.Ensuite un algorithme de tracking (DeepSORT)  pour suivre les objets dans le temps.
+
+
+- **Système d’alerte**  
+  En cas de détection d’un outil potentiellement oublié, une alerte sonore est déclenchée pour notifier l'équipe médicale.
+
+- **Personnalisation et configuration**  
+  La sidebar permet de configurer les paramètres tels que la source vidéo, la sensibilité de détection, et l’activation/désactivation des alertes.
+
+Déploiement
+-----------
+
+L’application est déployée localement ou sur un serveur accessible via un navigateur web :
+
+1. **Pré-requis**  
+   - Python 3.11  
+   - Librairies : Streamlit, Ultralytics (YOLO), OpenCV, autres dépendances listées dans ``requirements.txt``.
+
+2. **Installation**  
+   .. code-block:: bash
+
+      pip install -r requirements.txt
+
+3. **Lancement de l’application**  
+   Depuis le terminal, exécuter :
+
+   .. code-block:: bash
+
+      streamlit run app.py
+
+   où ``app.py`` est le script principal de l’interface.
+
+4. **Accès à l’interface**  
+   Ouvrir un navigateur à l’adresse ``http://localhost:8501`` pour accéder à l’application.
+
+5. **Connexion caméra externe**  
+   L’interface supporte la connexion à des caméras via URL réseau (RTSP) ou via scrcpy pour capter des flux d’une tablette Android en direct.
+
+Exemple d'interface (capture d'écran)
+-------------------------------------
+
+.. image:: _static/streamlit.png
+   :alt: Exemple d’interface Streamlit avec détection d’outils chirurgicaux
+   :align: center
+   :width: 600px
+
+Perspectives futures
+-------------------
+
+- Intégration d’un module d’analyse prédictive pour classifier la gravité de l’opération selon les outils détectés.
+- Ajout d’un tableau de bord centralisé pour historique des interventions et statistiques.
+- Amélioration de l’interface avec des alertes visuelles et sonores avancées et notifications push.
+- Support multi-utilisateurs avec authentification et gestion des sessions.
+
+---
+
+Cette architecture garantit une application robuste, facile à utiliser par le personnel médical, et évolutive pour intégrer de nouvelles fonctionnalités selon les besoins cliniques.
