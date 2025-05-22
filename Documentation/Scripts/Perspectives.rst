@@ -1,6 +1,5 @@
-=================================================
 Perspectives Futures
-=================================================
+===============================
 
 .. role:: red
    :class: red
@@ -18,71 +17,75 @@ Perspectives Futures
    </style>
 
 :blue:`Évolutions Techniques`
---------------------------
-Le projet peut évoluer vers plus d'automatisation et de précision. Voici les axes principaux :
+-----------------------------
 
-Amélioration OCR
-~~~~~~~~~~~~~~
-- Intégration de techniques de correction automatique
-- Support multi-langues pour les rapports internationaux
-- Meilleure gestion des tampons et signatures
+Amélioration des Modèles
+~~~~~~~~~~~~~~~~~~~~~~~~~
+- Entraînement de modèles plus précis (YOLOv8x, SAM, etc.)
+- Intégration de modules de segmentation sémantique pour mieux identifier les contours des outils.
+- Détection contextuelle basée sur l'anatomie environnante.
 
-Enrichissement du Dataset
-~~~~~~~~~~~~~~~~~~~~~~
-- Extension vers d'autres types d'analyses
-- Intégration de cas cliniques complexes
-- Couverture des variations régionales
+Suivi et Tracking Avancé
+~~~~~~~~~~~~~~~~~~~~~~~~~
+- Ajout de DeepSORT + ReID pour un meilleur suivi inter-frames.
+- Intégration de filtres de Kalman ou solutions hybrides pour améliorer la stabilité.
 
-Interface Utilisateur
-~~~~~~~~~~~~~~~~~~
-- Version mobile de l'application
-- Mode hors-ligne pour zones à faible connectivité
-- API pour intégration dans les systèmes hospitaliers
+Adaptation Multimodale
+~~~~~~~~~~~~~~~~~~~~~~~
+- Fusion de données provenant de caméras RGB, IR, et endoscopiques.
+- Adaptation à différents types de procédures (cardio, ortho, neuro, etc.)
 
 :green:`Applications Cliniques`
----------------------------
+-----------------------------
 
-Aide au Diagnostic
-~~~~~~~~~~~~~~~~
-Développement d'un module d'aide à la décision :
-- Détection précoce des anomalies
-- Suggestions de tests complémentaires
-- Alertes pour les valeurs critiques
+Alerte de Sécurité
+~~~~~~~~~~~~~~~~~~~~
+- Système d’alerte intelligent (oubli d’outil, double vérification en fin d’opération)
+- Journalisation des outils détectés et manipulation suspecte.
 
-Suivi Patient
-~~~~~~~~~~~
-- Visualisation des tendances
-- Comparaison avec historique
-- Détection des évolutions significatives
+Tableau de Bord Médical
+~~~~~~~~~~~~~~~~~~~~~~~~~
+- Interface de suivi des opérations avec historique par patient.
+- Analyse statistique de l'utilisation des instruments.
+
+Assistance à la Formation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Création d’un outil pédagogique de simulation pour internes en chirurgie.
+- Retour en temps réel sur les erreurs de manipulation d’outils.
 
 :red:`Contraintes & Défis`
------------------------
+----------------------------
 
-Sécurité
-~~~~~~~
-- Chiffrement bout-en-bout
-- Conformité aux normes médicales
-- Protection renforcée des données sensibles
+Conformité Médicale
+~~~~~~~~~~~~~~~~~~~~~
+- Respect des normes RGPD et HIPAA.
+- Validation par des experts du domaine médical.
+- Intégration avec les protocoles de blocs opératoires réels.
 
-Performance
-~~~~~~~~~~
-- Optimisation pour grand volume
-- Réduction temps de traitement
-- Gestion efficace ressources serveur
+Fiabilité et Robustesse
+~~~~~~~~~~~~~~~~~~~~~~~~~
+- Fonctionnement sans coupure durant une opération.
+- Réduction du taux de faux positifs/negatifs.
+- Tolérance aux variations de lumière, de caméra, ou de mouvement.
 
 :blue:`Innovation & Recherche`
---------------------------
+-----------------------------
 
-Intelligence Artificielle
-~~~~~~~~~~~~~~~~~~~~~~
-- Modèles prédictifs pour évolutions pathologiques
-- Apprentissage continu des cas rares
-- Adaptation aux spécificités locales
+Vision par Ordinateur Explicable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Explication des décisions du modèle pour favoriser l’acceptabilité médicale.
+- Génération de rapports d'interprétabilité visuelle.
 
-Interopérabilité
-~~~~~~~~~~~~~~
-- Standards internationaux
-- Formats d'échange universels
-- Communication inter-systèmes
+Apprentissage Continu
+~~~~~~~~~~~~~~~~~~~~~~~
+- Capacité du système à apprendre de nouveaux outils sans ré-entraînement complet.
+- Adaptation dynamique à différents blocs opératoires ou chirurgiens.
 
-Cette roadmap évoluera selon les retours utilisateurs et avancées technologiques.
+Interopérabilité Hospitalière
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Intégration avec les systèmes hospitaliers (HL7, DICOM, PACS).
+- Export automatique des alertes vers le dossier patient informatisé.
+
+----
+
+Ce document de vision stratégique accompagnera l’évolution du projet, en gardant un équilibre entre avancées techniques, bénéfices cliniques et contraintes réglementaires.
