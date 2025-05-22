@@ -1,6 +1,6 @@
 # Textra Documentation
 
-Welcome to the documentation repository for Textra-Health.
+Welcome to the documentation repository for SurgiSafe.
 ## Getting Started with Documentation Development
 
 If you're interested in contributing to the documentation, follow these steps to set up your development environment:
