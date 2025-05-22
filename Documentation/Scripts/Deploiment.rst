@@ -56,7 +56,7 @@ L’application est déployée localement ou sur un serveur accessible via un na
 Exemple d'interface (capture d'écran)
 -------------------------------------
 
-.. image:: _static/streamlit.png
+.. image:: Documentation/Images/streamlit.png
    :alt: Exemple d’interface Streamlit avec détection d’outils chirurgicaux
    :align: center
    :width: 600px
