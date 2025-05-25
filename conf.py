@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'SurgiSafe'
-copyright = '2025, IATDS'
+copyright = '2025, IATDS,ENSAM'
 author = 'IATDS'
 
 # -- General configuration ---------------------------------------------------
