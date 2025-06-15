@@ -16,6 +16,7 @@ Bienvenue à SurgiSafe's documentation!
    Documentation/Scripts/2_Equipe.rst
    Documentation/Scripts/Pipeline.rst
    Documentation/Scripts/Dataset.rst
+   Documentation/Scripts/model.rst
    Documentation/Scripts/Deploiment.rst
    Documentation/Scripts/Perspectives.rst
 
