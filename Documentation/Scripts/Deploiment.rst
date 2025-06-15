@@ -2,7 +2,7 @@
 Documentation de l'Interface SurgiSafe Pro
 ==============================
 
-.. image:: images/logo.png
+.. image:: Surgical-Tool-Detection/Documentation/Images/SurgiSafe.png
    :align: center
    :alt: Logo SurgiSafe Pro
 
@@ -19,7 +19,7 @@ L'interface offre :
 - des **alertes automatiques**,
 - des **options d'exportation des données**.
 
-.. image:: images/introduction_interface.png
+.. image:: Surgical-Tool-Detection/Documentation/Images/interface.png
    :align: center
    :alt: Interface principale de SurgiSafe Pro
 
@@ -33,7 +33,7 @@ Fonctionnalités Principales
 - **Validation** : vérifie l'existence du fichier et signale les erreurs.
 - **Configuration Avancée** : ajustement des seuils de confiance (0.01 à 1.0) et d'IoU (0.1 à 1.0).
 
-.. image:: images/model_config.png
+.. image:: Surgical-Tool-Detection/Documentation/Images/model.png
    :align: center
    :alt: Configuration du modèle YOLOv8
 
@@ -44,7 +44,7 @@ Fonctionnalités Principales
 - **Validation Vidéo** : métadonnées (durée, frames, FPS).
 - **Traitement Temps Réel** : redimension adaptatif (320 à 1280 px), skip frames si FPS < 10.
 
-.. image:: images/video_upload.png
+.. image:: Surgical-Tool-Detection/Documentation/Images/video.png
    :align: center
    :alt: Upload et lecture de la vidéo chirurgicale
 
@@ -55,7 +55,7 @@ Fonctionnalités Principales
 - **Suivi Temporel** : identifiants uniques (Track ID), moyenne glissante des bbox.
 - **Historique** : 50 dernières détections par instrument.
 
-.. image:: images/instrument_detection.png
+.. image::Surgical-Tool-Detection/Documentation/Images/progr.png
    :align: center
    :alt: Détection et suivi des instruments chirurgicaux
 
@@ -71,7 +71,7 @@ Fonctionnalités Principales
 - **Mouvement** : distance parcourue.
 - **Statut** : *active*, *lost*, *removed*.
 
-.. image:: images/risk_analysis.png
+.. image:: Surgical-Tool-Detection/Documentation/Images/alerte.png
    :align: center
    :alt: Analyse temporelle des instruments et gestion des risques
 
@@ -83,9 +83,6 @@ Fonctionnalités Principales
 - **Sonore** : option d'alerte audio (*fichier requis : beep.mp3*).
 - **Historique** : jusqu’à 100 alertes.
 
-.. image:: images/alerts_system.png
-   :align: center
-   :alt: Alertes visuelles et textuelles déclenchées automatiquement
 
 6. Visualisation et Annotations
 -------------------------------
@@ -94,7 +91,7 @@ Fonctionnalités Principales
 - **Overlay Système** : heure, FPS, durée, n° d'instruments actifs.
 - **Indicateurs** : cercles de statut colorés.
 
-.. image:: images/annotated_video.png
+.. image:: Surgical-Tool-Detection/Documentation/Images/story.png
    :align: center
    :alt: Visualisation annotée de la vidéo avec overlay dynamique
 
@@ -108,7 +105,7 @@ Fonctionnalités Principales
   - Types d’alertes
 - **Tableau Instruments** : nom, ID, durée, statut, confiance, mouvement.
 
-.. image:: images/dashboard.png
+.. image:: Surgical-Tool-Detection/Documentation/Images/diag.png
    :align: center
    :alt: Tableau de bord en temps réel avec graphiques
 
@@ -120,9 +117,6 @@ Fonctionnalités Principales
 - **Détections** : CSV par frame.
 - **Rapport Complet** : fichier JSON (session complète).
 
-.. image:: images/export_options.png
-   :align: center
-   :alt: Exportation des données et génération de rapports
 
 9. Contrôles et Paramètres
 ---------------------------
@@ -132,7 +126,7 @@ Fonctionnalités Principales
 - **Générer un rapport** JSON.
 - **Paramètres Avancés** : sons, seuils, export auto.
 
-.. image:: images/settings_controls.png
+.. image:: Surgical-Tool-Detection/Documentation/Images/control.png
    :align: center
    :alt: Commandes de contrôle et paramètres de session
 
@@ -145,10 +139,6 @@ Configuration Requise
 - **Vidéo** : formats MP4, AVI, MOV, MKV
 - **Système** : support GPU (CUDA) ou CPU
 
-.. image:: images/requirements.png
-   :align: center
-   :alt: Configuration minimale requise
-
 Utilisation
 ===========
 
@@ -159,9 +149,6 @@ Utilisation
 5. Observez les alertes et statistiques.
 6. Exportez les résultats.
 
-.. image:: images/usage_steps.png
-   :align: center
-   :alt: Étapes pour utiliser SurgiSafe Pro
 
 Téléchargement des Données
 ===========================
@@ -169,24 +156,7 @@ Téléchargement des Données
 Le dataset d'entraînement peut être téléchargé depuis :
 
 - **EndoVis Instrument Dataset** : https://endovissub-instrument.grand-challenge.org/
-- **Cholec80** (annotations manuelles requises) : https://camma.u-strasbg.fr/datasets
 
-.. note::
 
-   Veuillez respecter les licences de chaque dataset utilisé.
-
-Limitations et Améliorations Futures
-====================================
-
-- **Alertes Sonores** : nécessite un fichier (ex. : *beep.mp3*).
-- **Performance** : vidéos longues ou en haute résolution peuvent ralentir le système.
-- **Tracking Avancé** : possibilité future d’intégrer **DeepSORT** pour une gestion améliorée des occlusions.
-
-.. image:: images/future_improvements.png
-   :align: center
-   :alt: Limitations et pistes d'amélioration futures
-
-----
-
-.. footer:: Dernière mise à jour : Juin 2025 – Projet encadré par [NOM DU PROFESSEUR OU ÉCOLE]
+   Veuillez respecter les licences de dataset utilisé.
 
