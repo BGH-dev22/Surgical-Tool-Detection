@@ -2,7 +2,8 @@
 Documentation de l'Interface SurgiSafe Pro
 ==============================
 
-.. image:: Surgical-Tool-Detection/Documentation/Images/SurgiSafe.png
+.. image:: Surgical-Tool-Detection/Documentation/Images
+/SurgiSafe.png
    :align: center
    :alt: Logo SurgiSafe Pro
 
