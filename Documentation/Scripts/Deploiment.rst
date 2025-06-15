@@ -1,75 +1,192 @@
-Interface et Déploiement 
-===================================================
+==============================
+Documentation de l'Interface SurgiSafe Pro
+==============================
 
-Vue d'ensemble
---------------
+.. image:: images/logo.png
+   :align: center
+   :alt: Logo SurgiSafe Pro
 
-L'application de suivi chirurgical et détection d'outils est une interface web interactive développée avec Streamlit. Elle permet la détection en temps réel des instruments chirurgicaux via un modèle YOLOv8 personnalisé, offrant un retour visuel instantané et des alertes en cas d'anomalies (oubli d’outils, etc.). Cette interface vise à faciliter la surveillance des interventions et améliorer la sécurité patient.
+Introduction
+============
 
-Architecture de l'Interface
----------------------------
+**SurgiSafe Pro** est une application basée sur **Streamlit** qui permet le **suivi intelligent des instruments chirurgicaux en temps réel** à partir d'une vidéo.
 
-L'interface est organisée autour de plusieurs modules clés :
+Elle utilise le modèle **YOLOv8** pour la détection d'objets, un système de **suivi avec identifiants uniques**, et une **analyse temporelle** pour identifier les instruments oubliés ou à risque.
 
-- **Module d'entrée vidéo**  
-  Permet la capture et la lecture de flux vidéo en direct ou via URL (RTSP, HTTP). Ce flux est ensuite traité image par image.
+L'interface offre :
+- une **visualisation en direct**,
+- des **statistiques dynamiques**,
+- des **alertes automatiques**,
+- des **options d'exportation des données**.
 
-- **Module de détection et suivi**  
-  Intègre le modèle YOLOv8 personnalisé chargé localement pour détecter les outils chirurgicaux dans chaque frame.Ensuite un algorithme de tracking (DeepSORT)  pour suivre les objets dans le temps.
+.. image:: images/introduction_interface.png
+   :align: center
+   :alt: Interface principale de SurgiSafe Pro
 
+Fonctionnalités Principales
+===========================
 
-- **Système d’alerte**  
-  En cas de détection d’un outil potentiellement oublié, une alerte sonore est déclenchée pour notifier l'équipe médicale.
+1. Chargement et Configuration du Modèle
+----------------------------------------
 
-- **Personnalisation et configuration**  
-  La sidebar permet de configurer les paramètres tels que la source vidéo, la sensibilité de détection, et l’activation/désactivation des alertes.
+- **Chargement du Modèle** : via la barre latérale (par défaut : ``C:/Users/Hp/runs/train/exp_endovis_i5/weights/best.pt``).
+- **Validation** : vérifie l'existence du fichier et signale les erreurs.
+- **Configuration Avancée** : ajustement des seuils de confiance (0.01 à 1.0) et d'IoU (0.1 à 1.0).
 
-Déploiement
------------
+.. image:: images/model_config.png
+   :align: center
+   :alt: Configuration du modèle YOLOv8
 
-L’application est déployée localement ou sur un serveur accessible via un navigateur web :
+2. Sélection et Traitement de la Source Vidéo
+---------------------------------------------
 
-1. **Pré-requis**  
-   - Python 3.11  
-   - Librairies : Streamlit, Ultralytics (YOLO), OpenCV, autres dépendances listées dans ``requirements.txt``.
+- **Upload de Vidéo** : formats supportés : MP4, AVI, MOV, MKV.
+- **Validation Vidéo** : métadonnées (durée, frames, FPS).
+- **Traitement Temps Réel** : redimension adaptatif (320 à 1280 px), skip frames si FPS < 10.
 
-2. **Installation**  
-   .. code-block:: bash
+.. image:: images/video_upload.png
+   :align: center
+   :alt: Upload et lecture de la vidéo chirurgicale
 
-      pip install -r requirements.txt
-
-3. **Lancement de l’application**  
-   Depuis le terminal, exécuter :
-
-   .. code-block:: bash
-
-      streamlit run app.py
-
-   où ``app.py`` est le script principal de l’interface.
-
-4. **Accès à l’interface**  
-   Ouvrir un navigateur à l’adresse ``http://localhost:8501`` pour accéder à l’application.
-
-5. **Connexion caméra externe**  
-   L’interface supporte la connexion à des caméras via URL réseau (RTSP) ou via scrcpy pour capter des flux d’une tablette Android en direct.
-
-Exemple d'interface 
+3. Détection et Suivi des Instruments
 -------------------------------------
 
-.. image:: /Documentation/Images/streamlit.png
+- **Détection Spatiale** : avec YOLOv8 (ex. : *Right_Prograsp_Forceps*).
+- **Suivi Temporel** : identifiants uniques (Track ID), moyenne glissante des bbox.
+- **Historique** : 50 dernières détections par instrument.
 
-   :alt: Exemple d’interface Streamlit avec détection d’outils chirurgicaux
+.. image:: images/instrument_detection.png
    :align: center
-   :width: 600px
+   :alt: Détection et suivi des instruments chirurgicaux
 
-Perspectives futures
+4. Analyse Temporelle et Gestion des Risques
+--------------------------------------------
+
+- **Durée de Présence** :
+  - Normal : < 10 min
+  - Warning : 10–20 min
+  - Danger : 20–30 min
+  - Critical : > 30 min
+  - Extended : > 45 min
+- **Mouvement** : distance parcourue.
+- **Statut** : *active*, *lost*, *removed*.
+
+.. image:: images/risk_analysis.png
+   :align: center
+   :alt: Analyse temporelle des instruments et gestion des risques
+
+5. Système d’Alerte
 -------------------
 
-- Intégration d’un module d’analyse prédictive pour classifier la gravité de l’opération selon les outils détectés.
-- Ajout d’un tableau de bord centralisé pour historique des interventions et statistiques.
-- Amélioration de l’interface avec des alertes visuelles et sonores avancées et notifications push.
-- Support multi-utilisateurs avec authentification et gestion des sessions.
+- **Génération d’Alerte** : seuils personnalisables.
+- **Affichage** : messages visuels avec emojis : ⚠️ 🔶 🚨 💀
+- **Sonore** : option d'alerte audio (*fichier requis : beep.mp3*).
+- **Historique** : jusqu’à 100 alertes.
 
----
+.. image:: images/alerts_system.png
+   :align: center
+   :alt: Alertes visuelles et textuelles déclenchées automatiquement
 
-Cette architecture garantit une application robuste, facile à utiliser par le personnel médical, et évolutive pour intégrer de nouvelles fonctionnalités selon les besoins cliniques.
+6. Visualisation et Annotations
+-------------------------------
+
+- **Vidéo Annotée** : boîtes englobantes colorées (vert, jaune, orange, rouge, violet).
+- **Overlay Système** : heure, FPS, durée, n° d'instruments actifs.
+- **Indicateurs** : cercles de statut colorés.
+
+.. image:: images/annotated_video.png
+   :align: center
+   :alt: Visualisation annotée de la vidéo avec overlay dynamique
+
+7. Tableau de Bord de Performance
+---------------------------------
+
+- **Statistiques Temps Réel** : FPS, durée, alertes, instruments actifs.
+- **Graphiques** :
+  - Detections par frame
+  - Répartition des risques
+  - Types d’alertes
+- **Tableau Instruments** : nom, ID, durée, statut, confiance, mouvement.
+
+.. image:: images/dashboard.png
+   :align: center
+   :alt: Tableau de bord en temps réel avec graphiques
+
+8. Exportation de Données
+--------------------------
+
+- **Instruments** : CSV avec ID, nom, durée, statut, risque.
+- **Alertes** : CSV avec timestamp, niveau, message.
+- **Détections** : CSV par frame.
+- **Rapport Complet** : fichier JSON (session complète).
+
+.. image:: images/export_options.png
+   :align: center
+   :alt: Exportation des données et génération de rapports
+
+9. Contrôles et Paramètres
+---------------------------
+
+- **Démarrer/Arrêter** l’analyse.
+- **Réinitialiser** la session.
+- **Générer un rapport** JSON.
+- **Paramètres Avancés** : sons, seuils, export auto.
+
+.. image:: images/settings_controls.png
+   :align: center
+   :alt: Commandes de contrôle et paramètres de session
+
+Configuration Requise
+=====================
+
+- **Dépendances** :
+  - ``streamlit``, ``ultralytics``, ``cv2``, ``numpy``, ``pandas``, ``plotly``, ``torch``
+- **Modèle YOLOv8** : ``best.pt``
+- **Vidéo** : formats MP4, AVI, MOV, MKV
+- **Système** : support GPU (CUDA) ou CPU
+
+.. image:: images/requirements.png
+   :align: center
+   :alt: Configuration minimale requise
+
+Utilisation
+===========
+
+1. Chargez un modèle via la barre latérale.
+2. Téléchargez une vidéo.
+3. Ajustez les paramètres.
+4. Lancez l’analyse.
+5. Observez les alertes et statistiques.
+6. Exportez les résultats.
+
+.. image:: images/usage_steps.png
+   :align: center
+   :alt: Étapes pour utiliser SurgiSafe Pro
+
+Téléchargement des Données
+===========================
+
+Le dataset d'entraînement peut être téléchargé depuis :
+
+- **EndoVis Instrument Dataset** : https://endovissub-instrument.grand-challenge.org/
+- **Cholec80** (annotations manuelles requises) : https://camma.u-strasbg.fr/datasets
+
+.. note::
+
+   Veuillez respecter les licences de chaque dataset utilisé.
+
+Limitations et Améliorations Futures
+====================================
+
+- **Alertes Sonores** : nécessite un fichier (ex. : *beep.mp3*).
+- **Performance** : vidéos longues ou en haute résolution peuvent ralentir le système.
+- **Tracking Avancé** : possibilité future d’intégrer **DeepSORT** pour une gestion améliorée des occlusions.
+
+.. image:: images/future_improvements.png
+   :align: center
+   :alt: Limitations et pistes d'amélioration futures
+
+----
+
+.. footer:: Dernière mise à jour : Juin 2025 – Projet encadré par [NOM DU PROFESSEUR OU ÉCOLE]
+
