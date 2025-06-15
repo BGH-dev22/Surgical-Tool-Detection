@@ -20,20 +20,20 @@ Le dataset est organisé en **4 dossiers principaux**, chacun représentant une 
 
 - `left_frames/` : Images issues de la caméra gauche (format RGB, recadrées et redimensionnées)
 
-  .. image:: Documentation/Images/left.png
+  .. image:: Surgical-Tool-Detection/Documentation/Images/left.png
      :alt: Exemple d'image de la caméra gauche
      :width: 400px
      :align: center
 
 - `right_frames/` : Images issues de la caméra droite
-   .. image:: Documentation/Images/right.png
+   .. image:: Surgical-Tool-Detection/Documentation/Images/right.png
      :alt: Exemple d'image de la caméra droite
      :width: 400px
      :align: center
 
 - `ground_truth/` : Dossiers contenant les annotations (masques) pour chaque instrument
 
-  .. image:: Documentation/Images/ground.png
+  .. image:: Surgical-Tool-Detection/Documentation/Images/ground.png
      :alt: Exemple de masque binaire
      :width: 400px
      :align: center
