@@ -18,20 +18,20 @@ Structure du Dataset
 
 Le dataset est organisé en **4 dossiers principaux**, chacun représentant une séquence vidéo ou une procédure distincte. À l’intérieur de chaque dossier, on retrouve :
 
-- `left_frames/` : Images issues de la caméra gauche (format RGB, recadrées et redimensionnées)
+- `left_frames` : Images issues de la caméra gauche (format RGB, recadrées et redimensionnées)
 
   .. image:: Surgical-Tool-Detection/Documentation/Images/left.png
      :alt: Exemple d'image de la caméra gauche
      :width: 400px
      :align: center
 
-- `right_frames/` : Images issues de la caméra droite
+- `right_frames` : Images issues de la caméra droite
    .. image:: Surgical-Tool-Detection/Documentation/Images/right.png
      :alt: Exemple d'image de la caméra droite
      :width: 400px
      :align: center
 
-- `ground_truth/` : Dossiers contenant les annotations (masques) pour chaque instrument
+- `ground_truth` : Dossiers contenant les annotations (masques) pour chaque instrument
 
   .. image:: Surgical-Tool-Detection/Documentation/Images/ground.png
      :alt: Exemple de masque binaire
@@ -44,13 +44,13 @@ Le dataset est organisé en **4 dossiers principaux**, chacun représentant une 
 
 Chaque dossier `ground_truth/` contient des sous-dossiers nommés selon les instruments annotés dans la vidéo, par exemple :
 
-- `Right_Prograsp_Forceps_labels/`
-- `Left_Prograsp_Forceps_labels/`
-- `Maryland_Bipolar_Forceps_labels/`
-- `Right_Large_Needle_Driver_labels/`
-- `Left_Large_Needle_Driver_labels/`
-- `Prograsp_Forceps_labels/`
-- `Other_labels/`
+- `Right_Prograsp_Forceps_labels`
+- `Left_Prograsp_Forceps_labels`
+- `Maryland_Bipolar_Forceps_labels`
+- `Right_Large_Needle_Driver_labels`
+- `Left_Large_Needle_Driver_labels`
+- `Prograsp_Forceps_labels`
+- `Other_labels`
 
 Fichiers d'Annotation
 ----------------------
