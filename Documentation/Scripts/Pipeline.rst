@@ -1,4 +1,4 @@
-Pipeline du Projet "SurgiSafe Pro"
+Pipeline du Projet SurgiSafe
 ==================================
 
 1. Définition des Objectifs et Analyse des Besoins
