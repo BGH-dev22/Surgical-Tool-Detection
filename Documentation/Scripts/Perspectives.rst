@@ -73,4 +73,3 @@ Interopérabilité Hospitalière
 
 ----
 
-Ce document de vision stratégique accompagnera l’évolution du projet, en gardant un équilibre entre avancées techniques, bénéfices cliniques et contraintes réglementaires.
