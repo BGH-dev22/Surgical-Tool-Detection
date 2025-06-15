@@ -20,20 +20,20 @@ Le dataset est organisé en **4 dossiers principaux**, chacun représentant une 
 
 - `left_frames/` : Images issues de la caméra gauche (format RGB, recadrées et redimensionnées)
 
-  .. image:: _static/left_frame_example.png
+  .. image:: Documentation/Images/left.png
      :alt: Exemple d'image de la caméra gauche
      :width: 400px
      :align: center
 
 - `right_frames/` : Images issues de la caméra droite
-   .. image:: _static/left_frame_example.png
-     :alt: Exemple d'image de la caméra gauche
+   .. image:: Documentation/Images/right.png
+     :alt: Exemple d'image de la caméra droite
      :width: 400px
      :align: center
 
 - `ground_truth/` : Dossiers contenant les annotations (masques) pour chaque instrument
 
-  .. image:: _static/binary_mask_example.png
+  .. image:: Documentation/Images/ground.png
      :alt: Exemple de masque binaire
      :width: 400px
      :align: center
