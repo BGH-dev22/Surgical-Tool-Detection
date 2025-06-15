@@ -2,8 +2,7 @@
 Documentation de l'Interface SurgiSafe Pro
 ==============================
 
-.. image:: Surgical-Tool-Detection/Documentation/Images
-/SurgiSafe.png
+.. image:: Surgical-Tool-Detection/Documentation/Images/SurgiSafe.png
    :align: center
    :alt: Logo SurgiSafe Pro
 
@@ -20,7 +19,7 @@ L'interface offre :
 - des **alertes automatiques**,
 - des **options d'exportation des données**.
 
-.. image:: Surgical-Tool-Detection/Documentation/Images/interface.png
+.. image:: Surgical-Tool-Detection/Documentation/Images//interface.png
    :align: center
    :alt: Interface principale de SurgiSafe Pro
 
@@ -160,4 +159,16 @@ Le dataset d'entraînement peut être téléchargé depuis :
 
 
    Veuillez respecter les licences de dataset utilisé.
+Lancer l'Interface depuis la Ligne de Commande (CMD)
+-----------------------------------------------------
+
+Pour exécuter l'application :
+
+.. code-block:: bash
+
+   cd Surgical-Tool-Detection/Documentation/Notebooks/app.py
+   streamlit run surgisafe_app.py
+
+Remplace ``surgisafe_app.py`` par le nom exact de ton fichier principal.  
+Assure-toi d’avoir activé l’environnement virtuel si nécessaire (``venv/Scripts/activate`` sous Windows).
 
