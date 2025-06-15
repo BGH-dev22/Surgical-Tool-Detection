@@ -11,7 +11,7 @@ Le jeu de données utilisé dans ce projet est composé d’images stéréo issu
 
 Vous pouvez télécharger le jeu de données depuis ce lien :
 
-`https://endovissub2017-roboticinstrumentsegmentation.grand-challenge.org/Downloads/`_
+`<https://endovissub2017-roboticinstrumentsegmentation.grand-challenge.org/Downloads/>`_
 
 Structure du Dataset
 ----------------------
