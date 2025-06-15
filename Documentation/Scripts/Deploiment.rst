@@ -2,7 +2,7 @@
 Documentation de l'Interface SurgiSafe Pro
 ==============================
 
-.. image:: Surgical-Tool-Detection/Documentation/Images/SurgiSafe.png
+.. image:: ../Images/SurgiSafe.png
    :align: center
    :alt: Logo SurgiSafe Pro
 
@@ -19,7 +19,7 @@ L'interface offre :
 - des **alertes automatiques**,
 - des **options d'exportation des données**.
 
-.. image:: Surgical-Tool-Detection/Documentation/Images//interface.png
+.. image:: ../Images/interface.png
    :align: center
    :alt: Interface principale de SurgiSafe Pro
 
@@ -33,7 +33,7 @@ Fonctionnalités Principales
 - **Validation** : vérifie l'existence du fichier et signale les erreurs.
 - **Configuration Avancée** : ajustement des seuils de confiance (0.01 à 1.0) et d'IoU (0.1 à 1.0).
 
-.. image:: Surgical-Tool-Detection/Documentation/Images/model.png
+.. image:: ../Images/model.png
    :align: center
    :alt: Configuration du modèle YOLOv8
 
@@ -44,7 +44,7 @@ Fonctionnalités Principales
 - **Validation Vidéo** : métadonnées (durée, frames, FPS).
 - **Traitement Temps Réel** : redimension adaptatif (320 à 1280 px), skip frames si FPS < 10.
 
-.. image:: Surgical-Tool-Detection/Documentation/Images/video.png
+.. image:: ../Images/video.png
    :align: center
    :alt: Upload et lecture de la vidéo chirurgicale
 
@@ -91,7 +91,7 @@ Fonctionnalités Principales
 - **Overlay Système** : heure, FPS, durée, n° d'instruments actifs.
 - **Indicateurs** : cercles de statut colorés.
 
-.. image:: Surgical-Tool-Detection/Documentation/Images/story.png
+.. image:: ../Images/story.png
    :align: center
    :alt: Visualisation annotée de la vidéo avec overlay dynamique
 
@@ -105,7 +105,7 @@ Fonctionnalités Principales
   - Types d’alertes
 - **Tableau Instruments** : nom, ID, durée, statut, confiance, mouvement.
 
-.. image:: Surgical-Tool-Detection/Documentation/Images/diag.png
+.. image:: ../Images/diag.png
    :align: center
    :alt: Tableau de bord en temps réel avec graphiques
 
@@ -126,7 +126,7 @@ Fonctionnalités Principales
 - **Générer un rapport** JSON.
 - **Paramètres Avancés** : sons, seuils, export auto.
 
-.. image:: Surgical-Tool-Detection/Documentation/Images/control.png
+.. image::../Images/control.png
    :align: center
    :alt: Commandes de contrôle et paramètres de session
 
